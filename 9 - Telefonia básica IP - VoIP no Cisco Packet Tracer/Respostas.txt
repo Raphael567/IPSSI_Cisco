@@ -1,0 +1,7 @@
+Respostas:
+a) O que significa e qual a função do ATA?
+ATA significa Adaptador Telefônico Analógico (Analog Telephone Adapter).
+Sua função é converter sinais analógicos de voz, como os de um telefone tradicional, em sinais digitais que podem ser transmitidos pela rede IP (VoIP) e vice-versa. Ou seja, permite usar telefones comuns em redes VoIP.
+
+b) Descreva a condição onde é possível a redução de custo de uma chamada telefônica para um telefone convencional, usando VoIP.
+A redução de custo ocorre quando a chamada é feita usando a rede IP (como a Internet) para transportar a voz ao invés das redes telefônicas tradicionais. Se a outra ponta da chamada também estiver em um sistema VoIP, a ligação pode ser gratuita ou com custo muito baixo, mesmo em chamadas interurbanas ou internacionais, pois o tráfego é tratado como dados na rede e não como chamada telefônica convencional.

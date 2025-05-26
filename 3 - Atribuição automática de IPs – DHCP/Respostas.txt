@@ -1,0 +1,48 @@
+13. Explique o ocorrido e a causa.
+    Quando os PCs (PC2, PC3 e PC4) executam o comando **ipconfig /release**, eles liberam seu endereço IP atual, ficando sem IP. Ao executar **ipconfig /renew** nos novos hosts (PC10 a PC13), eles solicitam novos endereços IP ao servidor DHCP. Os hosts anteriores (PC1 a PC4) também renovam seus IPs ao executar o comando. Isso ocorre porque o DHCP é responsável por distribuir automaticamente endereços IP válidos para os dispositivos na rede. Se o pool de endereços disponível é limitado, nem todos os hosts podem obter um IP, e alguns podem ficar sem endereço.
+
+---
+
+14. Para que serve o DHCP?
+    O DHCP (Dynamic Host Configuration Protocol) serve para automatizar a atribuição de endereços IP e outras configurações de rede (máscara, gateway, DNS) para dispositivos em uma rede, evitando a necessidade de configurar manualmente cada host.
+
+---
+
+15. Ação realizada: inserção de um novo servidor (Server1) na rede.
+
+---
+
+16. Configuração do Server1:
+    IP estático: 200.1.3.10
+    Máscara de rede: 255.255.255.0
+    Start IP Address no DHCP: 200.1.3.200
+    Maximum Number of Users: 8
+
+---
+
+17. No Server0, o parâmetro Maximum Number of Users no DHCP foi redefinido para 8.
+
+---
+
+18. Salvar, fechar e reabrir o arquivo da simulação provoca reset na rede, forçando a renovação dos IPs de todos os dispositivos, que passam a receber endereços conforme a nova configuração do DHCP.
+
+---
+
+19. No prompt de comandos do PC0, ao verificar o IP com **ipconfig**, o endereço IP atribuído é conforme o DHCP. O ping em broadcast (ping 255.255.255.255) mostrará quais hosts respondem na rede local.
+
+---
+
+20. Ao localizar um host que não respondeu ao ping broadcast (por exemplo, por estar em uma sub-rede diferente ou sem IP válido), ao executar **ipconfig** e ping broadcast neste host, ele poderá comunicar com outros dispositivos da sua sub-rede que respondem ao broadcast.
+
+---
+
+21. Respostas finais:
+
+f) Dois DHCP-Servers podem atuar numa mesma rede?
+Sim, podem.
+
+g) Qual a vantagem de se fazer isso?
+A vantagem é garantir redundância e disponibilidade. Se um servidor DHCP falhar, o outro pode continuar distribuindo endereços IP, evitando interrupção na rede.
+
+h) Que cuidados devem ser tomados?
+É preciso garantir que os dois servidores DHCP não atribuam endereços IP que se sobreponham (não podem entregar o mesmo endereço IP para hosts diferentes). Isso é feito configurando pools de endereços distintos ou coordenando os servidores para evitar conflitos.

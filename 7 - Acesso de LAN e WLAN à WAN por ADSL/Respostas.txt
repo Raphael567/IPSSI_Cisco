@@ -1,0 +1,13 @@
+Respostas:
+
+a) Quem fornece as configurações de IP para que o usuário final possa navegar na Internet?
+O servidor DHCP do provedor (geralmente o modem ou roteador da WAN Emulation) fornece as configurações de IP ao usuário final.
+
+b) Na rede sem fio do usuário final (WLAN), quem forneceu as configurações aos Laptops?
+O roteador sem fio (Wi-Fi) é quem fornece as configurações IP via DHCP para os Laptops.
+
+c) Como é fornecida a configuração de DNS Server aos Laptops?
+A configuração do servidor DNS é fornecida automaticamente junto com o endereço IP pelo serviço DHCP do roteador sem fio.
+
+d) Ao enviar ping para um domínio, quem responde é um IP. Por quê?
+Porque o nome do domínio é traduzido para um endereço IP pelo servidor DNS, e o ping ocorre para esse endereço IP, que é o identificador real na rede.

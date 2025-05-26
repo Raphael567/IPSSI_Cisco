@@ -1,0 +1,99 @@
+14. Router0 – Interfaces:
+
+FastEthernet0/0
+  IP: 200.1.0.1
+  Máscara: 255.255.255.0
+  Classe da rede: Classe C
+
+Serial2/0
+  IP: 1.0.0.1
+  Máscara: 255.0.0.0
+  Clock Rate: 1200
+  Classe da rede: Classe A
+
+Serial3/0
+  IP: 3.0.0.1
+  Máscara: 255.0.0.0
+  Clock Rate: 9600
+  Classe da rede: Classe A
+
+---
+
+15. Router1 – Interfaces:
+
+FastEthernet0/0
+  IP: 200.1.1.1
+  Máscara: 255.255.255.0
+  Classe da rede: Classe C
+
+Serial2/0
+  IP: 3.0.0.2
+  Máscara: 255.0.0.0
+  Clock Rate: **(não configurado aqui, pois é DTE, mas pode ser 1200 ou deixado em branco)**
+  Classe da rede: Classe A
+
+Serial3/0
+  IP: 2.0.0.1
+  Máscara: 255.0.0.0
+  Clock Rate: 64000
+  Classe da rede: Classe A
+
+---
+
+16. Router2 – Interfaces:
+
+FastEthernet0/0
+  IP: 200.1.2.1
+  Máscara: 255.255.255.0
+  Classe da rede: Classe C
+
+Serial2/0
+  IP: 1.0.0.2
+  Máscara: 255.0.0.0
+  Clock Rate: (não configurado aqui, DTE)
+  Classe da rede: Classe A
+
+Serial3/0
+  IP: 2.0.0.2
+  Máscara: 255.0.0.0
+  Clock Rate: (não configurado aqui, DTE)
+  Classe da rede: Classe A
+
+---
+
+18. Teste de conectividade (Roteamento Estático)
+
+ping PC3 (IP do PC3): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ (exemplo: 200.1.1.x)
+  TTL = \_\_ (Exemplo: 252 se PC0 -> Router0 -> Router1 -> PC3, descontando 1 por roteador)
+
+ping PC6 (IP do PC6): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ (exemplo: 200.1.2.x)
+  TTL = \_\_ (Exemplo: 251 se PC0 -> Router0 -> Router2 -> PC6)
+
+---
+
+20. Após remover a conexão Router0 - Router2:
+
+a) Quais redes foram afetadas?
+A rede do Router0 não consegue mais se comunicar diretamente com a rede do Router2 e vice-versa.
+
+b) Detalhe sua resposta:
+A conexão entre as redes ligadas ao Router0 e Router2 foi perdida, impedindo comunicação direta. A comunicação entre Router0 e Router1 permanece normalmente.
+
+---
+
+Roteamento Dinâmico – Redes para configurar no RIP:
+
+Router0:
+  200.1.0.0
+  1.0.0.0
+  3.0.0.0
+
+Router1:
+  200.1.1.0
+  3.0.0.0
+  2.0.0.0
+
+Router2:
+  200.1.2.0
+  1.0.0.0
+  2.0.0.0

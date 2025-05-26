@@ -1,0 +1,39 @@
+a) Qual a função do roteador?
+O roteador é responsável por encaminhar pacotes de dados entre redes diferentes, decidindo o melhor caminho para o pacote baseado no endereço IP de destino.
+
+b) O que é um default gateway?
+O default gateway é o endereço IP do roteador ou dispositivo que serve como ponto de saída padrão para uma rede, usado quando o destino do pacote não está na rede local.
+
+c) O que acontece se não declararmos o default gateway em um PC?
+O PC não conseguirá se comunicar com redes fora da sua sub-rede local, pois não saberá para onde enviar pacotes destinados a endereços IP externos.
+
+d) Qual a principal desvantagem no uso do roteamento estático?
+A principal desvantagem é a necessidade de configuração manual e manutenção constante, especialmente quando a topologia da rede muda, pois as rotas não se ajustam automaticamente.
+
+e) O que é domínio de difusão de uma rede?
+Domínio de difusão é o conjunto de dispositivos que recebem broadcasts enviados na rede. Broadcasts são limitados ao domínio de difusão e não atravessam roteadores.
+
+f) Por que todas as máquinas das duas redes não respondem simultaneamente aos “broadcasts”?
+Porque broadcasts são restritos ao domínio de difusão da rede local e não são encaminhados entre redes diferentes por roteadores.
+
+g) O que representa o TTL apresentado na resposta do comando “ping”?
+TTL (Time To Live) indica o número máximo de saltos (roteadores) que um pacote pode atravessar antes de ser descartado. Cada roteador que o pacote passa decrementa o TTL em 1.
+
+h) O que faz o comando “tracert”?
+O comando “tracert” (ou traceroute) mostra o caminho que um pacote percorre até o destino, listando todos os roteadores intermediários e o tempo de resposta de cada salto.
+
+i) Neste exercício, quantas redes estão configuradas?
+Duas redes estão configuradas: a rede 200.1.0.0/24 e a rede 200.1.1.0/24.
+
+j) Quais os endereços de cada rede?
+Rede 1: 200.1.0.0 com máscara 255.255.255.0
+Rede 2: 200.1.1.0 com máscara 255.255.255.0
+
+---
+
+TTL:
+
+No PC0, ao pingar um host da outra rede (200.1.1.100), o TTL geralmente será 127 (considerando TTL inicial 128, decresce 1 por passar pelo roteador).
+
+No PC5, ao pingar um host da outra rede (200.1.0.100), o TTL geralmente será 127 (pelo mesmo motivo).
+

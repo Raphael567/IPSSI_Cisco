@@ -1,0 +1,43 @@
+11. Verificações com o Hub:
+
+a) A solicitação de eco (ping) é replicada para todos os hosts conectados ao hub.
+b) Sim, todos os hosts recebem a solicitação.
+c) Sim, os hosts que não são o destino descartam a solicitação de ping.
+d) Apenas o host de destino (ex: 200.1.2.3) responde à solicitação.
+e) A resposta à solicitação de eco é enviada apenas ao host que a enviou (PC0).
+f) Não, somente o host que enviou a solicitação (PC0) recebe a resposta.
+g) Sim, os outros hosts descartam a resposta.
+
+---
+
+a) A solicitação de eco é replicada somente até o switch aprender a tabela MAC; depois, é encaminhada apenas para o host destino.
+b) Inicialmente sim, mas depois não.
+c) Sim, os não-destinos descartam a mensagem.
+d) Somente o destino responde.
+e) A resposta vai apenas para o host solicitante (PC0).
+f) Não, só o host origem recebe a resposta.
+g) Sim, os demais hosts descartam.
+
+---
+
+17–18. Ping em Broadcast (com Switch):
+
+Ping 200.1.2.255:
+
+No Cisco Packet Tracer, esse comando pode ser simulado mesmo que não seja funcional em redes reais.
+Resposta esperada: Nem todos os hosts respondem; depende da configuração do ICMP e permissões.
+Normalmente, o broadcast ICMP não é respondido por padrão em ambientes reais, mas alguns hosts podem responder no simulador.
+
+---
+
+19. Respostas finais:
+
+h) Qual a diferença na atuação do hub e do switch?
+
+O hub é um dispositivo de camada 1 (Física). Ele replica todo o tráfego para todas as portas — não distingue destinos.
+O switch atua na camada 2 (Enlace). Ele identifica o destino (MAC address) e encaminha os pacotes apenas à porta correta. Isso **reduz colisões** e melhora o desempenho da rede.
+
+i) Para que servem as mensagens STP usadas pelo switch?
+
+O STP (Spanning Tree Protocol) serve para evitar loops de rede em ambientes com múltiplos switches interconectados.
+Ele detecta caminhos redundantes e desativa temporariamente algumas conexões, garantindo uma topologia sem loops.

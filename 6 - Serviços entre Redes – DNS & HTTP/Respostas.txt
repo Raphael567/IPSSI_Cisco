@@ -1,0 +1,115 @@
+Passo 7 – Endereços dos servidores e gateways
+Rede 0 = 200.168.0.0
+Server0 (IP) = 200.168.0.254
+Default Gateway (IP) = 200.168.0.1 (Router0)
+
+Rede 2 = 200.168.2.0
+Server2 (IP) = 200.168.2.254
+Default Gateway (IP) = 200.168.2.1 (Router2)
+
+Rede 3 = 200.168.3.0
+Server3 (IP) = 200.168.3.254
+Default Gateway (IP) = 200.168.3.1 (Router3)
+
+Rede 5 = 200.168.5.0
+Server5 (IP) = 200.168.5.254
+Default Gateway (IP) = 200.168.5.1 (Router5)
+
+Passo 9 – IPs dos PCs (exemplos típicos ao usar DHCP)
+PC0 = 200.168.0.100 (pode variar, depende do DHCP)
+
+PC3 = 200.168.2.100
+
+PC6 = 200.168.3.100
+
+PC9 = 200.168.5.100
+
+Passo 10 – Configuração dos servidores Server1 e Server4
+Server1:
+IP Address: 110.0.0.110/8
+Default Gateway: 110.0.0.1
+DNS Server: 140.0.0.140
+
+Server4:
+IP Address: 140.0.0.140/16
+Default Gateway: 140.0.0.1
+DNS Server: 140.0.0.140
+
+Passo 12 – Tabelas RIP (redes de exemplo)
+Router	Redes configuradas
+Router0	200.168.0.0, 10.0.0.0, 10.0.5.0
+Router1	200.168.1.0, 10.0.0.0, 10.0.1.0
+Router2	200.168.2.0, 10.0.1.0, 10.0.2.0
+Router3	200.168.3.0, 10.0.2.0, 10.0.3.0
+Router4	200.168.4.0, 10.0.3.0, 10.0.4.0
+Router5	200.168.5.0, 10.0.4.0, 10.0.5.0
+
+Obs: As redes 10.0.x.0/30 são as redes ponto a ponto entre roteadores.
+
+Passo 13 – Resultados dos pings e tracerts (exemplo típico)
+
+Host   Destino        TTL   Qtdd routers (saltos)
+------------------------------------------------
+PC0    110.0.0.110    252   4
+PC0    140.0.0.140    251   5
+
+PC3    110.0.0.110    252   3
+PC3    140.0.0.140    251   4
+
+PC6    110.0.0.110    252   2
+PC6    140.0.0.140    251   3
+
+PC9    110.0.0.110    252   1
+PC9    140.0.0.140    251   2
+
+TTL inicial geralmente 255; decrementa 1 a cada roteador.
+
+Passo 14 – Depois de remover a conexão Router0–Router1, repetir testes
+
+Host   Destino        TTL   Qtdd routers (saltos)
+------------------------------------------------
+PC0    110.0.0.110    252   (falha ou maior salto se roteamento alternativo existir)
+PC0    140.0.0.140    251   (falha ou maior salto se roteamento alternativo existir)
+
+PC3    110.0.0.110    252   (falha ou maior salto se roteamento alternativo existir)
+PC3    140.0.0.140    251   (falha ou maior salto se roteamento alternativo existir)
+
+PC6    110.0.0.110    252   (falha ou maior salto se roteamento alternativo existir)
+PC6    140.0.0.140    251   (falha ou maior salto se roteamento alternativo existir)
+
+PC9    110.0.0.110    252   (falha ou maior salto se roteamento alternativo existir)
+PC9    140.0.0.140    251   (falha ou maior salto se roteamento alternativo existir)
+
+22. Respostas:
+
+a) O que ocorre, diante de uma falha em um link de backbone, no uso do roteamento dinâmico?
+O roteamento dinâmico recalcula automaticamente as rotas alternativas, redirecionando o tráfego por caminhos disponíveis para manter a conectividade da rede.
+
+b) O que representa o TTL apresentado na resposta do comando “ping”?
+TTL (Time To Live) indica o número máximo de saltos (roteadores) que um pacote pode atravessar antes de ser descartado. Também serve para evitar que pacotes fiquem circulando indefinidamente na rede.
+
+c) O que faz o comando “tracert”?
+O comando “tracert” (trace route) mostra o caminho que os pacotes percorrem até um destino, listando os roteadores intermediários e o tempo de resposta de cada salto.
+
+d) O que faz o serviço HTTP?
+O serviço HTTP permite a transferência e visualização de páginas web entre servidores e clientes (navegadores).
+
+e) O que faz o serviço DNS?
+O serviço DNS traduz nomes de domínio legíveis (como www.elo.com.br) em endereços IP, facilitando o acesso a serviços na rede.
+
+f) Neste exercício, quantas redes foram configuradas?
+Seis redes foram configuradas.
+
+g) Quais os endereços de cada rede?
+
+Rede 0: 200.168.0.0
+
+Rede 1: 110.0.0.0
+
+Rede 2: 200.168.2.0
+
+Rede 3: 200.168.3.0
+
+Rede 4: 140.0.0.0
+
+Rede 5: 200.168.5.0
