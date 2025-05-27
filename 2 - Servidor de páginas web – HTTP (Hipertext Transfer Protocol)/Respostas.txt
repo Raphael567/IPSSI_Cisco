@@ -1,11 +1,21 @@
 7. Resultado do comando ipconfig no PC5:
    IP Address: 200.1.3.50
    Subnet Mask: 255.255.255.0
+<<<<<<< HEAD
 ---
 8. Quais máquinas respondem ao comando ping 255.255.255.255 a partir do PC5? Por quê?
    As máquinas que respondem são: PC6, PC7, PC8 e PC9, pois elas estão na mesma sub-rede que o PC5 (200.1.3.0/24). O endereço 255.255.255.255 é um broadcast limitado, e só alcança os dispositivos da mesma sub-rede. Os PCs da rede 200.1.2.0/24 (PC0 a PC4) não respondem.
 ---
 9.
+=======
+
+8. Quais máquinas respondem ao comando ping 255.255.255.255 a partir do PC5? Por quê?
+   As máquinas que respondem são: PC6, PC7, PC8 e PC9.
+   Motivo: Elas estão na mesma sub-rede que o PC5 (200.1.3.0/24). O endereço 255.255.255.255 é um broadcast limitado, e só alcança os dispositivos da mesma sub-rede. Os PCs da rede 200.1.2.0/24 (PC0 a PC4) não respondem.
+
+9.
+
+>>>>>>> 47a0f22a138c3d66d00638e7212e526049a2968c
 Qual a classe dessas redes?
 Classe C
 
@@ -19,9 +29,15 @@ Rede 2: 200.1.3.0/24
 Qual o endereço de broadcast de cada rede?
 Rede 1: 200.1.2.255
 Rede 2: 200.1.3.255
+<<<<<<< HEAD
 ---
 10. No PC0 foi configurado o IP 200.1.2.1 com a máscara 255.255.255.192 (/26).
 ---
+=======
+
+10. No PC0 foi configurado o IP 200.1.2.1 com a máscara 255.255.255.192 (/26).
+
+>>>>>>> 47a0f22a138c3d66d00638e7212e526049a2968c
 11. Os PCs foram configurados com os seguintes endereços IP e máscara /26 (255.255.255.192):
 
 PC1 = 200.1.2.10
@@ -33,6 +49,7 @@ PC6 = 200.1.2.60
 PC7 = 200.1.2.70
 PC8 = 200.1.2.80
 PC9 = 200.1.2.90
+<<<<<<< HEAD
 ---
 12. Resultado do comando ipconfig no PC0:
     IP Address: 200.1.2.1
@@ -51,6 +68,26 @@ PC9 = 200.1.2.90
     Motivo: Com a máscara /26, o endereço 200.1.2.70 está na segunda sub-rede, cujo intervalo vai de 200.1.2.64 a 200.1.2.127. O endereço de broadcast dessa rede é 200.1.2.127. Apenas hosts dentro dessa faixa respondem ao broadcast.
 ---
 16.
+=======
+
+12. Resultado do comando ipconfig no PC0:
+    IP Address: 200.1.2.1
+    Subnet Mask: 255.255.255.192
+
+13. Quais máquinas respondem ao comando ping 255.255.255.255 a partir do PC0? Porque?
+    Respondem os PCs com endereços entre 200.1.2.1 e 200.1.2.62, que pertencem à mesma sub-rede que o PC0. Isso inclui: PC1, PC2, PC3.
+    Motivo: Com a máscara /26, o intervalo da primeira sub-rede é de 200.1.2.0 até 200.1.2.63. O endereço de broadcast dessa rede é 200.1.2.63. Somente os hosts dentro dessa faixa respondem ao broadcast.
+
+14. Resultado do comando ipconfig no PC7:
+    IP Address: 200.1.2.70
+    Subnet Mask: 255.255.255.192
+
+15. Quais máquinas respondem ao comando ping 255.255.255.255 a partir do PC7? Porque?
+    Respondem os PCs com endereços entre 200.1.2.65 e 200.1.2.126, que pertencem à mesma sub-rede que o PC7. Isso inclui: PC8 e PC9.
+    Motivo: Com a máscara /26, o endereço 200.1.2.70 está na segunda sub-rede, cujo intervalo vai de 200.1.2.64 a 200.1.2.127. O endereço de broadcast dessa rede é 200.1.2.127. Apenas hosts dentro dessa faixa respondem ao broadcast.
+
+16. Respostas finais:
+>>>>>>> 47a0f22a138c3d66d00638e7212e526049a2968c
 
 a) Quantas redes temos configuradas?
 4 redes. A máscara /26 divide um bloco /24 em 4 sub-redes.

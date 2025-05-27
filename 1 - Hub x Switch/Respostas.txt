@@ -30,7 +30,11 @@ Normalmente, o broadcast ICMP não é respondido por padrão em ambientes reais,
 
 ---
 
+<<<<<<< HEAD
 19.
+=======
+19. Respostas finais:
+>>>>>>> 47a0f22a138c3d66d00638e7212e526049a2968c
 
 h) Qual a diferença na atuação do hub e do switch?
 

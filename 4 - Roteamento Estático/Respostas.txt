@@ -33,5 +33,11 @@ Rede 2: 200.1.1.0 com máscara 255.255.255.0
 
 TTL:
 
+<<<<<<< HEAD
 No PC0 e no PC5, ao pingar um host da outra rede (200.1.1.100), o TTL geralmente será 126.
+=======
+No PC0, ao pingar um host da outra rede (200.1.1.100), o TTL geralmente será 127 (considerando TTL inicial 128, decresce 1 por passar pelo roteador).
+
+No PC5, ao pingar um host da outra rede (200.1.0.100), o TTL geralmente será 127 (pelo mesmo motivo).
+>>>>>>> 47a0f22a138c3d66d00638e7212e526049a2968c
 

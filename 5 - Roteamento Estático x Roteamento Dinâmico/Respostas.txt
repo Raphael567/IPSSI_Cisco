@@ -29,7 +29,11 @@ FastEthernet0/0
 Serial2/0
   IP: 3.0.0.2
   Máscara: 255.0.0.0
+<<<<<<< HEAD
   Clock Rate: não configurado aqui, pois é DTE, mas pode ser 1200 ou deixado em branco
+=======
+  Clock Rate: **(não configurado aqui, pois é DTE, mas pode ser 1200 ou deixado em branco)**
+>>>>>>> 47a0f22a138c3d66d00638e7212e526049a2968c
   Classe da rede: Classe A
 
 Serial3/0
@@ -50,24 +54,40 @@ FastEthernet0/0
 Serial2/0
   IP: 1.0.0.2
   Máscara: 255.0.0.0
+<<<<<<< HEAD
   Clock Rate: não configurado
+=======
+  Clock Rate: (não configurado aqui, DTE)
+>>>>>>> 47a0f22a138c3d66d00638e7212e526049a2968c
   Classe da rede: Classe A
 
 Serial3/0
   IP: 2.0.0.2
   Máscara: 255.0.0.0
+<<<<<<< HEAD
   Clock Rate: não configurado
+=======
+  Clock Rate: (não configurado aqui, DTE)
+>>>>>>> 47a0f22a138c3d66d00638e7212e526049a2968c
   Classe da rede: Classe A
 
 ---
 
 18. Teste de conectividade (Roteamento Estático)
 
+<<<<<<< HEAD
 ping PC3 (IP do PC3): 200.1.1.100
   TTL = 128
 
 ping PC6 (IP do PC6): 200.1.2.100
   TTL = 128
+=======
+ping PC3 (IP do PC3): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ (exemplo: 200.1.1.x)
+  TTL = \_\_ (Exemplo: 252 se PC0 -> Router0 -> Router1 -> PC3, descontando 1 por roteador)
+
+ping PC6 (IP do PC6): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ (exemplo: 200.1.2.x)
+  TTL = \_\_ (Exemplo: 251 se PC0 -> Router0 -> Router2 -> PC6)
+>>>>>>> 47a0f22a138c3d66d00638e7212e526049a2968c
 
 ---
 
